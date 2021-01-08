@@ -177,11 +177,11 @@ const DesktopShare = ({
         icon={isVideoBroadcasting ? 'desktop' : 'desktop_off'}
         label={intl.formatMessage(vLabel)}
         description={intl.formatMessage(vDescr)}
-        color={isVideoBroadcasting ? 'primary' : 'default'}
+        color={isVideoBroadcasting ? 'actionbar_active' : 'actionbar_inactive'}
         ghost={!isVideoBroadcasting}
         hideLabel
         circle
-        size="lg"
+        size="action_btn"
         onClick={isVideoBroadcasting ? handleUnshareScreen : () => {
           if (IS_SAFARI && !ScreenshareBridgeService.hasDisplayMedia) {
             return mountModal(<Modal

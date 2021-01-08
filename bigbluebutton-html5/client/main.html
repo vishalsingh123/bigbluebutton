@@ -1,20 +1,3 @@
-<!--
-BigBlueButton open source conferencing system - http://www.bigbluebutton.org/
-
-Copyright (c) 2019 BigBlueButton Inc. and by respective authors (see below).
-
-This program is free software; you can redistribute it and/or modify it under the
-terms of the GNU Lesser General Public License as published by the Free Software
-Foundation; either version 3.0 of the License, or (at your option) any later
-version.
-
-BigBlueButton is distributed in the hope that it will be useful, but WITHOUT ANY
-WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
-
-You should have received a copy of the GNU Lesser General Public License along
-with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
--->
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -32,7 +15,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
       height: 100%;
       font-family: 'Source Sans Pro', Arial, sans-serif;
       font-size: 1rem; /* 16px */
-      background-color: #06172A;
+      background-color: var(--color-blue-oxford);
     }
 
     a {
@@ -85,7 +68,7 @@ with BigBlueButton; if not, see <http://www.gnu.org/licenses/>.
   <script src="compatibility/kurento-extension.js?v=VERSION" language="javascript"></script>
   <script src="compatibility/kurento-utils.js?v=VERSION" language="javascript"></script>
 </head>
-<body style="background-color: #06172A">
+<body>
   <div id="app" role="document"></div>
   <span id="destination"></span>
   <audio id="remote-media" autoplay>

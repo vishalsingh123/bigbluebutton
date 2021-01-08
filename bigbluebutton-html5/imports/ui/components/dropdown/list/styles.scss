@@ -65,7 +65,7 @@
   }
 
   .verticalList & {
-    padding: calc(var(--line-height-computed) / 3) 0;
+    padding: calc(var(--line-height-computed) / 1.5) 0;
 
     @include mq($small-only) {
       padding: calc(var(--line-height-computed) / 1.5) 0;
@@ -73,7 +73,7 @@
   }
 
   .horizontalList & {
-    padding: 0 calc(var(--line-height-computed) / 3);
+    padding: 0 calc(var(--line-height-computed) / 1.5);
 
     @include mq($small-only) {
       padding: calc(var(--line-height-computed) / 1.5) 0;

@@ -1,15 +1,19 @@
+:root {
+  --separator-color: #e4e4e4;
+}
+
 .separator {
   height: 1px;
-  background-color: var(--color-gray-lighter);
+  background-color: var(--separator-color);
   margin-top: calc(var(--line-height-computed) * .5);
   margin-bottom: calc(var(--line-height-computed) * .5);
 }
 
 .branding {
-  padding: 0 var(--sm-padding-x);
+  padding:var(--lg-padding-x) var(--sm-padding-x) var(--sm-padding-x);
   width: 100%;
   & > img {
+    max-width: 100px;
     max-height: 2rem;
-    max-width: 100%;
   }
 }

@@ -9,6 +9,26 @@
   --btn-default-color: var(--color-gray);
   --btn-default-bg: var(--color-white);
   --btn-default-border: var(--color-white);
+   --btn-white-color: var(--color-black);
+  --btn-white-bg: var(--color-white);
+  --btn-white-border: var(--color-white);
+
+  --btn-off-white-color: var(--color-black);
+  --btn-off-white-bg: var(--color-off-white);
+  --btn-off-white-border: var(--color-off-white);
+
+  --btn-gray-color: var(--color-white);
+  --btn-gray-bg: var(--color-gray-dark);
+  --btn-gray-border: var(--color-gray-dark);
+
+  --btn-active-color: #43475d;
+  --btn-active-bg: #dcdee8;
+  --btn-active-border: #dcdee8;
+
+  --btn-inactive-color: var(--color-blue-grey);
+  --btn-inactive-bg: #536c86;
+  --btn-inactive-border: #536c86;
+
 
   --btn-primary-color: var(--color-white);
   --btn-primary-bg: var(--color-primary);
@@ -25,6 +45,10 @@
   --btn-dark-color: var(--color-white);
   --btn-dark-bg: var(--color-gray-dark);
   --btn-dark-border: var(--color-danger);
+
+  --btn-actionbar-inactive-bg: var(--color-gray-dark-second);
+  --btn-actionbar-active-bg: var(--color-light-green);
+
 
   --btn-border-size: var(--border-size);
   --btn-border-radius: var(--border-radius);
@@ -266,6 +290,32 @@
   @include button-variant(var(--btn-dark-color), var(--btn-dark-bg), var(--btn-dark-border));
 }
 
+.actionbar_active {
+  @include button-variant(var(--btn-active-color), var(--btn-active-bg), var(--btn-active-border));
+  &:focus{
+    background-clip:inherit;
+    box-shadow: none;
+  }
+}
+.actionbar_inactive {
+  @include button-variant(var(--btn-inactive-color), var(--btn-inactive-bg), var(--btn-inactive-border));
+  &:focus{
+    background-clip:inherit;
+    box-shadow: none;
+  }
+}
+
+
+.buttonWrapper{
+  &:focus:not([aria-disabled="true"]){
+     .actionbar_active{background-clip:inherit; box-shadow: none;}
+     .actionbar_inactive{background-clip:inherit; box-shadow: none;}
+  }
+}
+
+
+.icon-bbb-plus{font-size:20px;}
+
 /* Styles
  * ==========
  */
@@ -345,3 +395,24 @@
   font-size: var(--btn-jumbo-font-size);
   padding: var(--btn-jumbo-padding);
 }
+
+.action_btn {
+	font-size:20px;
+  padding:8px;
+  width:45px; height:45px; border-radius:5px;
+}
+
+// .navbar-btn {
+// 	font-size:20px;
+//   padding:8px;
+// }
+
+.navbar-btn{font-size:15px; height:33px; padding:8px !important; border:none; background-color:transparent; display:flex; align-items:center; justify-content:center;
+  span:first-child{padding:0 !important; font-size:15px;
+    &:focus{box-shadow:none;}
+    i{font-size:100%;}
+  }
+}
+
+.right{display:inline-flex; position:relative;}
+

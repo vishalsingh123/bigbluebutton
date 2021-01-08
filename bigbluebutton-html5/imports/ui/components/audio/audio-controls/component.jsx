@@ -89,7 +89,7 @@ class AudioControls extends PureComponent {
         hideLabel
         label={label}
         aria-label={label}
-        color={!muted ? 'primary' : 'default'}
+        color={!muted ? 'actionbar_active' : 'actionbar_inactive'}
         ghost={muted}
         icon={muted ? 'mute' : 'unmute'}
         size="lg"
@@ -113,10 +113,10 @@ class AudioControls extends PureComponent {
             : intl.formatMessage(intlMessages.joinAudio)}
           label={inAudio ? intl.formatMessage(intlMessages.leaveAudio)
             : intl.formatMessage(intlMessages.joinAudio)}
-          color={inAudio ? 'primary' : 'default'}
+          color={inAudio ? 'actionbar_active' : 'actionbar_inactive'}
           ghost={!inAudio}
           icon={joinIcon}
-          size="lg"
+          size="action_btn"
           circle
           accessKey={inAudio ? shortcuts.leaveaudio : shortcuts.joinaudio}
         />

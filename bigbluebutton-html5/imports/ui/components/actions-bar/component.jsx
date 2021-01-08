@@ -37,6 +37,7 @@ class ActionsBar extends PureComponent {
     const actionBarClasses = {};
 
     actionBarClasses[styles.centerWithActions] = amIPresenter;
+    actionBarClasses[styles.actionsBar] = true;
     actionBarClasses[styles.center] = true;
     actionBarClasses[styles.mobileLayoutSwapped] = isLayoutSwapped && amIPresenter;
 
@@ -47,7 +48,8 @@ class ActionsBar extends PureComponent {
           height: ACTIONSBAR_HEIGHT,
         }}
       >
-        <div className={styles.left}>
+        <div className={styles.left} />
+        <div className={cx(actionBarClasses)}>
           <ActionsDropdown {...{
             amIPresenter,
             amIModerator,
@@ -66,8 +68,6 @@ class ActionsBar extends PureComponent {
             )
             : null
           }
-        </div>
-        <div className={cx(actionBarClasses)}>
           <AudioControlsContainer />
           {enableVideo
             ? (
@@ -85,8 +85,6 @@ class ActionsBar extends PureComponent {
             screenshareDataSavingSetting,
           }}
           />
-        </div>
-        <div className={styles.right}>
           {isLayoutSwapped
             ? (
               <PresentationOptionsContainer
@@ -97,6 +95,8 @@ class ActionsBar extends PureComponent {
             : null
           }
         </div>
+        <div className={styles.right} />
+
       </div>
     );
   }

@@ -4,13 +4,13 @@ public:
     desktopFontSize: 14px
     audioChatNotification: false
     autoJoin: true
-    listenOnlyMode: true
+    listenOnlyMode: false
     forceListenOnly: false
-    skipCheck: false
-    clientTitle: BigBlueButton
-    appName: BigBlueButton HTML5 Client
+    skipCheck: true
+    clientTitle: MeetApp
+    appName: MeetApp HTML5 Client
     bbbServerVersion: 2.3-dev
-    copyright: '©2020 BigBlueButton Inc.'
+    copyright: Trademill Technologies Pvt. Ltd
     html5ClientBuild: HTML5_CLIENT_VERSION
     helpLink: https://bigbluebutton.org/html5/
     lockOnJoin: true
@@ -96,7 +96,7 @@ public:
     branding:
       displayBrandingArea: true
     connectionTimeout: 60000
-    showHelpButton: true
+    showHelpButton: false
     effectiveConnection:
       - critical
       - danger
@@ -107,7 +107,7 @@ public:
     enableNetworkMonitoring: false
     packetLostThreshold: 10
   kurento:
-    wsUrl: HOST
+    wsUrl: wss://new.meetapp.in/bbb-webrtc-sfu
     # Valid for video-provider. Time (ms) before its WS connection times out
     # and tries to reconnect.
     wsConnectionTimeout: 4000
@@ -157,28 +157,32 @@ public:
       #   frameRate: requested framerate
       - id: low-u30
         name: low-u30
-        bitrate: 30
-        hidden: true
-        constraints:
-          frameRate: 3
-      - id: low-u25
-        name: low-u25
-        bitrate: 40
-        hidden: true
-        constraints:
-          frameRate: 3
-      - id: low-u20
-        name: low-u20
         bitrate: 50
         hidden: true
         constraints:
+          frameRate: 3
+        default: false
+      - id: low-u25
+        name: low-u25
+        bitrate: 100
+        hidden: true
+        constraints:
+          frameRate: 3
+        default: true
+      - id: low-u20
+        name: low-u20
+        bitrate: 200
+        hidden: true
+        constraints:
           frameRate: 5
+        default: false
       - id: low-u15
         name: low-u15
-        bitrate: 70
+        bitrate: 300
         hidden: true
         constraints:
           frameRate: 8
+        default: false
       - id: low-u12
         name: low-u12
         bitrate: 90
@@ -216,9 +220,9 @@ public:
     enableScreensharing: true
     enableVideo: true
     enableVideoMenu: true
-    enableListenOnly: true
-    autoShareWebcam: false
-    skipVideoPreview: false
+    enableListenOnly: false
+    autoShareWebcam: true
+    skipVideoPreview: true
     # Entry `thresholds` is an array of:
     # - threshold: minimum number of cameras being shared for profile to applied
     #   profile: a camera profile id from the cameraProfiles configuration array
@@ -303,7 +307,7 @@ public:
       showControls: true
       rtl: false
   layout:
-    autoSwapLayout: false
+    autoSwapLayout: true
     hidePresentation: false
     webcamsDefaultPlacement: 'top'
   media:

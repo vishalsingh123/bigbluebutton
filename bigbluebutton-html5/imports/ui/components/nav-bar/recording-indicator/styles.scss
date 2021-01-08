@@ -35,18 +35,18 @@
   @extend %recordingControl;
 
   padding: 5px;
-  background-color: var(--color-primary);
-  border: var(--border-size-large) solid var(--color-primary);
+  //background-color: var(--color-primary);
+  //border: var(--border-size-large) solid var(--color-primary);
 
   &:focus {
-    background-clip: padding-box;
-    border: var(--border-size-large) solid transparent;
+   // background-clip: padding-box;
+   // border: var(--border-size-large) solid transparent;
   }
 }
 
 .recordingControlOFF {
   @extend %recordingControl;
-
+/*
   padding: 7px;
   border: var(--border-size-small) solid var(--color-white);
   
@@ -55,17 +55,19 @@
     border: var(--border-size-large) solid var(--color-white);
     box-shadow: none;
   }
+*/
 }
 
 .presentationTitle {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-weight: 200;
+//  font-weight: 200;
   color: var(--color-white);
   font-size: var(--font-size-base);
   padding: 0;
-  margin-left: var(--sm-padding-x);
+//  margin-left: var(--sm-padding-x);
+  margin-left: 7px;
   margin-right: 0;
   white-space: nowrap;
   overflow: hidden;
@@ -110,7 +112,7 @@
 }
 
 .presentationTitleSeparator {
-  color: var(--color-gray);
+  color: var(--color-gray-light);
   font-size: var(--font-size-base);
   margin: 0 1rem;
 }

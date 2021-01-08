@@ -78,6 +78,13 @@
   }
 }
 
+.actionsBar{
+  button{
+    .default {color:green}
+    .primary {color:red;}
+  }
+}
+
 .mobileLayoutSwapped {
   @include mq($xsmall-only) {
     padding-right: var(--mobile-swap-offset);
@@ -109,7 +116,7 @@
     opacity: 1 !important;
   }
 }
-
+/*
 .btn {
   span {
     box-shadow: none;
@@ -122,7 +129,7 @@
 .btn {
   z-index: 3;
 }
-
+*/
 .presentationItem {
   span {
     text-overflow: ellipsis;

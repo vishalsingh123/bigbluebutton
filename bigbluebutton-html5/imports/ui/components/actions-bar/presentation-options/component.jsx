@@ -29,10 +29,10 @@ const PresentationOptionsContainer = ({ intl, toggleSwapLayout, isThereCurrentPr
       icon="presentation"
       label={intl.formatMessage(intlMessages.restorePresentationLabel)}
       description={intl.formatMessage(intlMessages.restorePresentationDesc)}
-      color="primary"
+      color="actionbar_active"
       hideLabel
       circle
-      size="lg"
+      size="action_btn"
       onClick={toggleSwapLayout}
       id="restore-presentation"
       disabled={!isThereCurrentPresentation}

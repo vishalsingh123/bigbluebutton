@@ -13,11 +13,18 @@
   --color-blue-light: #54a1f3;
   --color-blue-lighter: #92BCEA;
   --color-blue-lightest: #E4ECF2;
+  --color-blue-oxford: #303960;
+
+  --color-blue-dark:#5e7184;
+  --color-blue-grey:#a1aebb;
+
 
   --color-primary: #0F70D7;
   --color-success: #008081;
   --color-danger: #DF2721;
   --color-warning: purple;
+  --color-gray-dark-second: #4E5A66;
+  --color-light-green: #008081;
 
   --color-background: var(--color-gray-dark);
 
@@ -36,7 +43,7 @@
 
   --loader-bg: var(--color-gray-dark);
   --loader-bullet: var(--color-white);
-  --user-list-bg: var(--color-off-white);
+  --user-list-bg: #f5f5f5;
 
   --unread-messages-bg: var(--color-danger);
   --user-list-text: var(--color-gray);
@@ -55,6 +62,6 @@
   --user-icons-color: var(--color-gray-light);
   --user-icons-color-hover: var(--color-gray);
 
-  --list-item-bg-hover: #dce4ed;
+  --list-item-bg-hover: rgba(154, 160, 172, 0.15);
   --item-focus-border: var(--color-blue-lighter);
 }

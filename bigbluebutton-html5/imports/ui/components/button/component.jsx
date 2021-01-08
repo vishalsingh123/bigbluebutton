@@ -7,11 +7,11 @@ import Icon from '../icon/component';
 import BaseButton from './base/component';
 
 const SIZES = [
-  'jumbo', 'lg', 'md', 'sm',
+  'jumbo', 'lg', 'md', 'sm', 'action_btn', 'navbar-btn',
 ];
 
 const COLORS = [
-  'default', 'primary', 'danger', 'success', 'dark',
+  'default', 'primary', 'danger', 'success', 'dark', 'actionbar_active', 'actionbar_inactive',
 ];
 
 const propTypes = {

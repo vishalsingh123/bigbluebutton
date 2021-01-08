@@ -1,6 +1,11 @@
 @import "/imports/ui/stylesheets/mixins/_indicators";
 @import "/imports/ui/stylesheets/variables/placeholders";
 
+:root {
+  --user-list-bg: #f5f5f5;
+}
+
+
 %list-item {
   display: flex;
   flex-flow: row;
@@ -37,12 +42,12 @@
 
 .chatListItem {
   @extend %list-item;
+  background-color: var(--user-list-bg);
   cursor: pointer;
   text-decoration: none;
   flex-grow: 1;
   line-height: 2;
   color: var(--color-gray-dark);
-  background-color: var(--color-off-white);
   padding-top: var(--lg-padding-y);
   padding-bottom: var(--lg-padding-y);
   padding-left: var(--lg-padding-y);
