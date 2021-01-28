@@ -92,7 +92,7 @@ class AudioControls extends PureComponent {
         color={!muted ? 'actionbar_active' : 'actionbar_inactive'}
         ghost={muted}
         icon={muted ? 'mute' : 'unmute'}
-        size="lg"
+        size="action_btn"
         circle
         accessKey={shortcuts.togglemute}
       />

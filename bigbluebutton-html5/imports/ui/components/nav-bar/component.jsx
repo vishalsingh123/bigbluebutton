@@ -70,6 +70,28 @@ class NavBar extends Component {
     clearInterval(this.interval);
   }
 
+  renderCustomIcon() {
+    return (
+      <svg width="25" height="25" viewBox="0 0 100 70" fill="#fff">
+        {' '}
+        {' '}
+        {' '}
+        <rect width="100" height="8" />
+        {' '}
+        {' '}
+        {' '}
+        <rect y="30" width="100" height="8" />
+        {' '}
+        {' '}
+        {' '}
+        <rect y="60" width="100" height="8" />
+        {' '}
+        {' '}
+        {' '}
+      </svg>
+    );
+  }
+
   render() {
     const {
       hasUnreadMessages,
@@ -107,7 +129,8 @@ class NavBar extends Component {
               data-test={hasUnreadMessages ? 'hasUnreadMessages' : null}
               label={intl.formatMessage(intlMessages.toggleUserListLabel)}
               aria-label={ariaLabel}
-              icon="user"
+              customIcon={this.renderCustomIcon()}
+              // icon="user"
               className={cx(toggleBtnClasses)}
               aria-expanded={isExpanded}
               accessKey={TOGGLE_USERLIST_AK}

@@ -44,6 +44,7 @@ export default class Media extends Component {
       children,
       audioModalIsOpen,
       usersVideo,
+      metadataProp,
       layoutContextState,
     } = this.props;
 

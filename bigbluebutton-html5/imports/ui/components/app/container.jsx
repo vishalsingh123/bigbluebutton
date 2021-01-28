@@ -74,9 +74,9 @@ const currentUserEmoji = currentUser => (currentUser ? {
   status: currentUser.emoji,
   changedAt: currentUser.emojiTime,
 } : {
-    status: 'none',
-    changedAt: null,
-  });
+  status: 'none',
+  changedAt: null,
+});
 
 export default injectIntl(withModalMounter(withTracker(({ intl, baseControls }) => {
   const authTokenValidation = AuthTokenValidation.findOne({}, { sort: { updatedAt: -1 } });
@@ -93,8 +93,8 @@ export default injectIntl(withModalMounter(withTracker(({ intl, baseControls }) 
 
   const currentUser = Users.findOne({ userId: Auth.userID }, { fields: { approved: 1, emoji: 1 } });
   const currentMeeting = Meetings.findOne({ meetingId: Auth.meetingID },
-    { fields: { publishedPoll: 1, voiceProp: 1 } });
-  const { publishedPoll, voiceProp } = currentMeeting;
+    { fields: { publishedPoll: 1, voiceProp: 1, metadataProp: 1 } });
+  const { publishedPoll, voiceProp, metadataProp } = currentMeeting;
 
   if (!currentUser.approved) {
     baseControls.updateLoadingState(intl.formatMessage(intlMessages.waitingApprovalMessage));
@@ -121,6 +121,7 @@ export default injectIntl(withModalMounter(withTracker(({ intl, baseControls }) 
     currentUserEmoji: currentUserEmoji(currentUser),
     hasPublishedPoll: publishedPoll,
     startBandwidthMonitoring,
+    metadataProp,
     handleNetworkConnection: () => updateNavigatorConnection(navigator.connection),
   };
 })(AppContainer)));

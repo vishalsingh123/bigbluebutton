@@ -328,6 +328,16 @@ class App extends Component {
       />) : null);
   }
 
+  getStyle() {
+    const { metadataProp } = this.props;
+    if (metadataProp && metadataProp.metadata['background-image']) {
+      return {
+        backgroundImage: `url(${metadataProp.metadata['background-image']}`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover',
+      };
+    }
+    return {};
+  }
+
   render() {
     const {
       customStyle, customStyleUrl, openPanel,
@@ -339,7 +349,7 @@ class App extends Component {
         <BannerBarContainer />
         <NotificationsBarContainer />
         <section className={styles.wrapper}>
-          <div className={openPanel ? styles.content : styles.noPanelContent}>
+          <div className={openPanel ? styles.content : styles.noPanelContent} style={this.getStyle()}>
             {this.renderNavBar()}
             {this.renderMedia()}
             {this.renderActionsBar()}

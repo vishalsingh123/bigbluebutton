@@ -43,7 +43,7 @@
 }
 
 .glow {
-  border-radius: 50%;
+  //border-radius: 50%;
   
   :global(.animationsEnabled) & {
     animation: pulse 1s infinite ease-in;

@@ -44,7 +44,7 @@
 }
 
 .presentationTitle {
-  font-weight: 200;
+  font-weight: 400;
   color: var(--color-white);
   font-size: var(--font-size-base);
   margin: 0;
@@ -110,15 +110,28 @@
 
   z-index: 3;
 
-  &:hover,
-  &:focus {
-    span {
-      background-color: transparent !important;
-      color: var(--color-white) !important;
-      opacity: .75;
-    }
-  }
+//  &:hover,
+//  &:focus {
+//    span {
+//      background-color: transparent !important;
+//      color: var(--color-white) !important;
+//      opacity: .75;
+//    }
+//  }
 }
 
 .btnSettings {
 }
+
+.navbarBtnGroup {background-color:var(--color-white); border-radius:100em; padding:0 8px; margin-left:10px;}
+.btnMenu {
+  &:hover,
+  &:focus{
+    span:first-child{background-color:transparent !important; box-shadow:none !important;}
+  }
+  span:first-child{background-color:transparent; border:none; padding:5px;
+    &:hover,
+    &:focus{background-color:transparent !important; box-shadow:none !important;}
+  }
+}
+

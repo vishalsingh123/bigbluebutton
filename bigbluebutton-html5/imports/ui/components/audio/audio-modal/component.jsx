@@ -262,7 +262,7 @@ class AudioModal extends Component {
     });
 
     return joinEchoTest().then(() => {
-      //console.log(inputDeviceId, outputDeviceId);
+      // console.log(inputDeviceId, outputDeviceId);
       this.setState({
         content: 'echoTest',
         disableActions: false,
@@ -551,6 +551,9 @@ class AudioModal extends Component {
     } = this.props;
 
     const { content } = this.state;
+
+    if (!isIEOrEdge && this.skipAudioOptions() && !isIOSChrome) return null;
+
 
     return (
       <span>

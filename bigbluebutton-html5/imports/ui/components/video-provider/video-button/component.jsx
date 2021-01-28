@@ -80,8 +80,7 @@ const JoinVideoButton = ({
       color={hasVideoStream ? 'actionbar_active' : 'actionbar_inactive'}
       icon={hasVideoStream ? 'video' : 'video_off'}
       ghost={!hasVideoStream}
-      size="lg"
-      circle
+      size="action_btn"
       disabled={!!disableReason}
     />
   );
